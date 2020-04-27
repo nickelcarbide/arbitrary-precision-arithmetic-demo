@@ -80,13 +80,13 @@ class BigUInt:
 		if len(a) > len(b):
 			return 1 # Greater
 		
-		for i in range(len(a)):
-			if a[-i] < b[-i]:
+		for i in range(len(a)-1, -1, -1):
+			if a[i] < b[i]:
 				return -1 # Lesser
-			if a[-i] > b[-i]:
+			if a[i] > b[i]:
 				return 1 # Greater
 
-		return 0
+		return 0 # Equal
 
 	def subtract(self, subtracted_int):
 		comparison = self.compare(subtracted_int)
