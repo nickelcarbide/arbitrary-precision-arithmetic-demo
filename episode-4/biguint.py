@@ -151,6 +151,6 @@ class BigUInt:
 				# Modulo the digit in the product so that only the last digit remains
 				product_digits[i+j] %= BASE
 			# The most significant digit comes from the final carry
-			product_digits[len(a)+j] = carry
+			product_digits[len(b)+i] = carry
 
 		return BigUInt(product_digits)
